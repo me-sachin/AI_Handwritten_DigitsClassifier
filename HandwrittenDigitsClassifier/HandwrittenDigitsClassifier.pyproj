@@ -1,0 +1,73 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>c884ba6f-6b62-470c-8fec-9ed85773414b</ProjectGuid>
+    <ProjectTypeGuids>{a41c8ea1-112a-4a2d-9f91-29557995525f};{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>predict.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <Name>HandwrittenDigitsClassifier</Name>
+    <RootNamespace>HandwrittenDigitsClassifier</RootNamespace>
+    <InterpreterId>Global|ContinuumAnalytics|Anaconda36-64</InterpreterId>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="CNN_MLP.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="dataloader.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="hiddenLayer.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="convPoolLayer.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="logisticRegressionLayer.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="predict.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="multiLayerPerceptron.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="train_CNN_MLP.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="train_multiLayerPerceptron.py" />
+    <Compile Include="train_logisticRegression.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="visualizer.py">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <InterpreterReference Include="Global|ContinuumAnalytics|Anaconda36-64" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="readme.md" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+  <!-- Uncomment the CoreCompile target to enable the Build command in
+       Visual Studio and specify your pre- and post-build commands in
+       the BeforeBuild and AfterBuild targets below. -->
+  <!--<Target Name="CoreCompile" />-->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+</Project>
