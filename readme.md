@@ -6,7 +6,7 @@ Imagine a world in which we can express ourselves in a natural way, and computer
 understand us.
 
 One step in that direction is the ability for computers to read our handwriting and translate it into
-digitized ASCII characters. To start easy, I restrict the focus on classifying single handwritten 
+digitized ASCII characters. To start easy,I restrict the focus on classifying single handwritten 
 digits, from 0 to 9.
 
 
@@ -37,7 +37,7 @@ implement a deep network (a simplified version of LeNet5), formed by the followi
 | Convolutional Layer            | 50 features with 5 x 5 field of view    | 50 features for each of the 8 x 8 sub-images      |
 | MaxPooling Layer               | 2 x 2 compression                       | 50 features for each of the 4 x 4 sub-images      |
 | Multilayer Perceptron Layer    | 800 x 500 space transformation          | 500 hidden features in the hidden layer           |
-| Logistic Regression Classifier | 500 x 10 classification                 | The probability of the image to be a 0, 1, 2, … 9 |
+| Logistic Regression Classifier | 500 x 10 classification                 | The probability of the image to be a 0, 1, 2, â€¦ 9 |
 
 * The convolutional layers encode patterns (mainly edges) in the image.
 * The maxpooling layers compress the image and indicate whether that specific sub-region contains the feature.
